@@ -3,17 +3,18 @@ class Email {
     this.min = 0;
     this.max = Infinity;
   }
+
   isValid(arg) {
-    if (typeof arg === "string") {
-      const beforeTag = arg.split("@")[0].length;
+    if (typeof arg === 'string') {
+      const beforeTag = arg.split('@')[0].length;
       console.log(beforeTag);
       return (
-        typeof arg === "string" &&
-        arg.includes("@") &&
-        beforeTag >= this.min &&
-        beforeTag <= this.max
+        typeof arg === 'string'
+        && arg.includes('@')
+        && beforeTag >= this.min
+        && beforeTag <= this.max
       );
-    } else return false;
+    } return false;
   }
 
   setEmailLengthConstraint(min, max = Infinity) {

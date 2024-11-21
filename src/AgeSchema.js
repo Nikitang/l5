@@ -7,8 +7,10 @@ class Age {
   isValid(age) {
     this.age = age;
     return this.adult
-      ? typeof this.age === "number" && this.validationAge() && !isNaN(age)
-      : typeof this.age === "number" && !isNaN(age);
+      ? typeof this.age === 'number'
+          && this.validationAge()
+          && !Number.isNaN(age)
+      : typeof this.age === 'number' && !Number.isNaN(age);
   }
 
   validationAge() {
